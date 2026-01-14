@@ -7,13 +7,11 @@ import styles from './Header.module.css';
 
 const productItems = [
     { label: 'P10 Pro', href: '/products/p10-pro' },
-    { label: 'Drone Pro', href: '/products/drone-pro' },
-    { label: 'Drone Lite', href: '/products/drone-lite' },
-    { label: 'Accessories', href: '/products/accessories' },
+    { label: 'Drone Pro', href: '/products/drone-x1' },
+
 ];
 
 const navItems = [
-    { label: 'Comms', href: '/comms' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
     { label: 'Launches', href: '/launches' },
