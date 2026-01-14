@@ -22,7 +22,9 @@ export default function Home() {
         subtitle="Drone Anatomy designs and builds autonomous drones for defense, logistics, and industrial applications-engineered from first principles for reliability, endurance, and real-world deployment"
         ctaText="View Drones"
         ctaLink="/products"
-        backgroundImage='/images/layout2.jpg'
+        // backgroundImage='/images/layout2.jpg'
+        // backgroundImageMobile='/images/layout2_mob.jpg'
+        backgroundVideo='/videos/section2.mov'
         contentPosition="top-right"
         overlayStyle="dark"
       />
