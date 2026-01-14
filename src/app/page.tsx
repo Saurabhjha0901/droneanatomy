@@ -24,9 +24,9 @@ export default function Home() {
         ctaLink="/products"
         // backgroundImage='/images/layout2.jpg'
         // backgroundImageMobile='/images/layout2_mob.jpg'
-        backgroundVideo='/videos/vtol_in_the_sky.mov'
-        contentPosition="top-right"
-        overlayStyle="dark"
+        backgroundVideo='/videos/drone_in_the_sky.mp4'
+        contentPosition="bottom-right"
+        overlayStyle="light"
       />
 
       {/* Enterprise Solutions Banner */}
