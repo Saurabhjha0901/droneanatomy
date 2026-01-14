@@ -24,7 +24,7 @@ export default function Home() {
         ctaLink="/products"
         // backgroundImage='/images/layout2.jpg'
         // backgroundImageMobile='/images/layout2_mob.jpg'
-        backgroundVideo='/videos/section2.mov'
+        backgroundVideo='/videos/vtol_in_the_sky.mov'
         contentPosition="top-right"
         overlayStyle="dark"
       />
