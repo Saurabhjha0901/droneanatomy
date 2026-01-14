@@ -18,10 +18,10 @@ export default function Home() {
 
       {/* Drone X1 Banner */}
       <Banner
-        title="Drone X1"
-        subtitle="Our flagship autonomous drone with 8K imaging, 60-minute flight time, and AI-powered obstacle avoidance. Built for professionals who demand excellence."
-        ctaText="Learn More"
-        ctaLink="/products/drone-x1"
+        title="Engineering Autonomous Aerial Systems"
+        subtitle="Drone Anatomy designs and builds autonomous drones for defense, logistics, and industrial applications-engineered from first principles for reliability, endurance, and real-world deployment"
+        ctaText="View Drones"
+        ctaLink="/products"
         backgroundImage='/images/layout2.jpg'
         contentPosition="top-right"
         overlayStyle="dark"
