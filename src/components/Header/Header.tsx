@@ -169,7 +169,7 @@ export const Header: React.FC = () => {
                         ))}
                     </ul>
                     <div className={styles.mobileCta}>
-                        <CTAButton href="/contact" variant='primary' showArrow size='small'>
+                        <CTAButton href="/contact" showArrow size='small'>
                             Get Started
                         </CTAButton>
                     </div>

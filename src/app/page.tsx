@@ -11,6 +11,7 @@ export default function Home() {
         ctaLink="/products"
         // backgroundImage='/images/new04.jpg'
         backgroundVideo='/videos/dronehero.mov'
+        backgroundImageMobile='/images/dronehero_mob.jpg'
         contentPosition="center-left"
         overlayStyle="dark"
       />

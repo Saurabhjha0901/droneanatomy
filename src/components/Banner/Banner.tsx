@@ -21,6 +21,7 @@ export interface BannerProps {
     ctaText?: string;
     ctaLink?: string;
     backgroundImage?: string;
+    backgroundImageMobile?: string;
     backgroundVideo?: string;
     contentPosition?: ContentPosition;
     overlayStyle?: 'dark' | 'light' | 'none';
@@ -57,6 +58,7 @@ export const Banner: React.FC<BannerProps> = ({
     ctaText,
     ctaLink,
     backgroundImage,
+    backgroundImageMobile,
     backgroundVideo,
     contentPosition = 'bottom-left',
     overlayStyle = 'dark',
@@ -127,6 +129,13 @@ export const Banner: React.FC<BannerProps> = ({
                         loop
                         playsInline
                         poster={backgroundImage}
+                    />
+                ) : (isMobile && backgroundImageMobile) ? (
+                    <img
+                        className={styles.backgroundImage}
+                        src={backgroundImageMobile}
+                        alt=""
+                        loading="lazy"
                     />
                 ) : backgroundImage ? (
                     <img
