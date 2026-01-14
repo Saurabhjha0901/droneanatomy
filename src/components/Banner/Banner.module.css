@@ -1,0 +1,302 @@
+/* Banner Component Styles */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Media */
+.backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.backgroundImage {
+    width: 100%;
+    /* Change it back in after the images are done */
+    height: 99.9%;
+    object-fit: cover;
+}
+
+.backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gradient Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.overlayDark {
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.overlayLight {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 50%);
+}
+
+/* Content Grid - 2 columns x 3 rows */
+.contentGrid {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: var(--spacing-4xl) var(--spacing-4xl) var(--spacing-4xl);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 800px;
+    padding: var(--spacing-2xl);
+}
+
+/* Grid Positions - 2x3 grid */
+.topLeft {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+}
+
+.topRight {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+}
+
+.centerLeft {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-self: center;
+}
+
+.centerRight {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
+}
+
+.bottomLeft {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    align-self: end;
+}
+
+.bottomRight {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    align-self: end;
+}
+
+/* Legacy positions - map to new grid */
+.topCenter {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: start;
+}
+
+.center {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.bottomCenter {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: center;
+    align-self: end;
+}
+
+/* Typography - Hero H2 style */
+.title {
+    font-family: var(--font-family-heading);
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+/* Title Size Variants */
+.titleSm {
+    font-size: 2rem;
+}
+
+.titleMd {
+    font-size: 3rem;
+}
+
+.titleLg {
+    font-size: 4rem;
+}
+
+.titleXl {
+    font-size: 5rem;
+}
+
+.titleHero {
+    font-size: 6rem;
+}
+
+.subtitle {
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    margin-top: 15px;
+    /* max-width: 480px; */
+}
+
+.ctaWrapper {
+    margin-top: var(--spacing-xl);
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+    position: absolute;
+    bottom: var(--spacing-2xl);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+    cursor: pointer;
+}
+
+.scrollIndicator:hover {
+    opacity: 1;
+}
+
+.scrollText {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.scrollArrow {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animateSlideUp {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.animateSlideUpDelay {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out 0.2s forwards;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .content {
+        max-width: 100%;
+        padding: var(--spacing-lg) 0;
+    }
+
+    /* On mobile, all positions go to bottom-left style */
+    .topLeft,
+    .topCenter,
+    .topRight,
+    .centerLeft,
+    .center,
+    .centerRight,
+    .bottomLeft,
+    .bottomCenter,
+    .bottomRight {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        align-self: center;
+    }
+
+    .title {
+        font-size: 2.25rem;
+        line-height: 95%;
+    }
+
+    .subtitle {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 640px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .banner {
+        min-height: 500px;
+    }
+}

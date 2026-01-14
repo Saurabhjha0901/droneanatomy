@@ -1,0 +1,37 @@
+/* StatsSection Component Styles */
+
+.statsSection {
+    width: 100%;
+    background-color: var(--color-bg);
+    padding: var(--spacing-4xl) var(--spacing-2xl);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-4xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .statsSection {
+        padding: var(--spacing-3xl) var(--spacing-lg);
+    }
+
+    .container {
+        gap: var(--spacing-3xl);
+    }
+}
+
+@media (max-width: 640px) {
+    .statsSection {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .container {
+        gap: var(--spacing-2xl);
+    }
+}

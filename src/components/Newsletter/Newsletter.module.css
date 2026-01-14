@@ -1,0 +1,124 @@
+/* Newsletter Component Styles */
+
+.newsletter {
+    width: 100%;
+    padding: var(--spacing-4xl) var(--spacing-2xl);
+    background-color: var(--color-bg);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Decorative vertical line */
+.decorativeLine {
+    width: 1px;
+    height: 80px;
+    background-color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xl);
+    letter-spacing: 0.02em;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    gap: var(--spacing-sm);
+}
+
+.input {
+    flex: 1;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.input:focus {
+    border-color: var(--color-text-primary);
+}
+
+.submitButton {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    white-space: nowrap;
+}
+
+.submitButton:hover {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+    border-color: var(--color-text-primary);
+}
+
+.footer {
+    margin-top: var(--spacing-2xl);
+}
+
+.supplierText,
+.legalText {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xs);
+}
+
+.link {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter {
+        padding: var(--spacing-3xl) var(--spacing-lg);
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .submitButton {
+        width: 100%;
+    }
+
+    .decorativeLine {
+        height: 60px;
+    }
+}
