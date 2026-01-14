@@ -23,8 +23,7 @@
 
 .backgroundImage {
     width: 100%;
-    /* Change it back in after the images are done */
-    height: 99.9%;
+    height: 100%;
     object-fit: cover;
 }
 
