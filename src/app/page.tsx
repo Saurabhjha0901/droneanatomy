@@ -9,9 +9,9 @@ export default function Home() {
         subtitle="Drone Anatomy exists to build the fundamental systems taht will define the next era of autonomous aviation"
         ctaText="Explore"
         ctaLink="/products"
-        // backgroundImage='/images/new04.jpg'
-        backgroundVideo='/videos/dronehero.mov'
-        backgroundImageMobile='/images/dronehero_mob.jpg'
+        backgroundImage='/images/hero_banner.jpg'
+        // backgroundVideo='/videos/dronehero.mov'
+        backgroundImageMobile='/images/hero_banner_mob.jpg'
         contentPosition="center-left"
         overlayStyle="dark"
       />

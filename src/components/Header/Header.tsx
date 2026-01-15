@@ -80,9 +80,7 @@ export const Header: React.FC = () => {
             >
                 {/* Logo */}
                 <a href="/" className={styles.logo}>
-                    <span className={styles.logoText}>
-                        Drone<span className={styles.logoAccent}>Anatomy</span>
-                    </span>
+                    <img src="/images/logo.png" alt="DroneAnatomy" className={styles.logoImage} />
                 </a>
 
                 {/* Desktop Navigation */}
@@ -127,7 +125,7 @@ export const Header: React.FC = () => {
                 {/* Mobile Menu Header */}
                 <div className={styles.mobileMenuHeader}>
                     <a href="/" className={styles.mobileMenuLogo} onClick={closeMobileMenu}>
-                        Drone<span className={styles.mobileMenuLogoAccent}>Anatomy</span>
+                        <img src="/images/logo.png" alt="DroneAnatomy" className={styles.logoImage} />
                     </a>
                     <button
                         type="button"
