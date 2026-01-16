@@ -13,7 +13,7 @@ export default function P10ProPage() {
                 titleSize='hero'
                 subtitle="Advanced Aerial Intelligence for Modern Agriculture"
                 contentPosition="center"
-                backgroundImage='/images/IMG_7150.png'
+                backgroundImage='/images/IMG_7150.PNG'
                 overlayStyle="dark"
                 textAlign='center'
                 showScrollIndicator
