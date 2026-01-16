@@ -15,7 +15,7 @@ export const Newsletter: React.FC<NewsletterProps> = ({
     title = 'Enter your email to sign up for DroneAnatomy updates',
     placeholder = 'Your email address',
     buttonText = 'Submit',
-    supplierEmail = 'suppliers@droneanatomy.com',
+    supplierEmail = 'info@droneanatomy.com',
     className = '',
 }) => {
     const [email, setEmail] = useState('');
@@ -61,12 +61,12 @@ export const Newsletter: React.FC<NewsletterProps> = ({
                             {supplierEmail}
                         </a>
                     </p>
-                    <p className={styles.legalText}>
+                    {/* <p className={styles.legalText}>
                         For information about trademarks, copyrights, and other IP at DroneAnatomy, click{' '}
                         <a href="/legal" className={styles.link}>
                             here
                         </a>
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </section>

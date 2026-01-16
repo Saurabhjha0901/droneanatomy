@@ -13,7 +13,7 @@ export default function P10ProPage() {
                 titleSize='hero'
                 subtitle="Advanced Aerial Intelligence for Modern Agriculture"
                 contentPosition="center"
-                backgroundImage='/images/p10hero.jpg'
+                backgroundImage='/images/IMG_7150.png'
                 overlayStyle="dark"
                 textAlign='center'
                 showScrollIndicator
@@ -25,7 +25,7 @@ export default function P10ProPage() {
                     {
                         title: 'P10 Pro Overview',
                         description: "The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, P10 Pro integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
-                        backgroundImage: '/images/p10layout2.jpg',
+                        backgroundImage: '/images/p10pro-overview.png',
                         specs: [
                             { label: 'Max Flight Time', value: '30 minutes' },
                             { label: 'Payload Capacity', value: '10kg' },
@@ -34,14 +34,37 @@ export default function P10ProPage() {
                         ],
                     },
                     {
-                        title: 'Pro-Grade Sensors',
-                        description: '1-inch CMOS sensor with adjustable aperture f/2.8-f/11. Dual native ISO for exceptional low-light performance and dynamic range.',
-                        backgroundImage: '',
+                        title: 'POWER SYSTEM',
+                        description: 'The Agri Drone P10 Pro power system is designed for high-discharge agricultural missions, delivering consistent output under heavy payload and low-altitude flight conditions. Intelligent power management ensures stable performance, extended battery life, and safe operation across varying environmental conditions.',
+                        backgroundImage: '/images/battery.png',
+                        specs: [
+                            { label: 'BATTERY TYPE', value: 'Li-ion, 12S' },
+                            { label: 'NOMINAL VOLTAGE', value: '44.4 V' },
+                            { label: 'BATTERY CAPACITY', value: '16000mAh' },
+                            { label: 'CHARGING TIME', value: '20 minutes' },
+                        ],
                     },
                     {
-                        title: 'Cinematic Modes',
-                        description: 'Built-in cinematic flight modes including Dolly Zoom, Orbit, and Reveal. Create Hollywood-quality shots with a single tap.',
+                        title: 'PROPULSION SYSTEM',
+                        description: 'The propulsion system of the P10 Pro is optimized for efficient lift, precise control, and long-term durability. Tuned specifically for agricultural workloads, it maintains stability during spraying while minimizing vibration and power loss.',
+                        backgroundImage: '/images/p10pro-propulsion.png',
+                        specs: [
+                            { label: 'MOTOR TYPE', value: 'Brushless outrunner ×4' },
+                            { label: 'PROPELLER DIAMETER', value: '24 in' },
+                            { label: 'MAX THRUST', value: '20000g' },
+                            { label: 'MAX RPM', value: '10000 RPM' },
+                        ],
+                    },
+                    {
+                        title: 'REMOTE & CONTROL APPLICATION',
+                        description: 'The Agri Drone P10 Pro control ecosystem combines a dedicated industrial-grade remote controller with a proprietary mobile application, enabling precise mission planning, real-time monitoring, and reliable command execution in field conditions.',
                         backgroundImage: '',
+                        specs: [
+                            { label: 'CONTROL INTERFACE', value: 'Dedicated remote controller + mobile application' },
+                            { label: 'MAX CONTROL RANGE', value: 'Up to 1 km (line of sight)' },
+                            { label: 'MISSION PLANNING', value: 'Waypoint-based autonomous operation' },
+                            { label: 'OPERATING FREQUENCY', value: '2.4GHz/5.8GHz' },
+                        ],
                     },
                 ]}
             />
@@ -49,14 +72,15 @@ export default function P10ProPage() {
             <Slider
                 slides={[
                     {
-                        title: 'AI-Powered Flight',
-                        description: 'Advanced neural processing unit enables intelligent obstacle avoidance with 360° sensing. Navigate complex environments with confidence.',
-                        backgroundImage: '/images/p10layout3.jpg',
+                        title: 'MADE IN INDIA. BUILT FOR INDIA.',
+                        description: 'Designed, engineered, and manufactured in India, the P10 Pro is optimized for Indian agricultural conditions — from high temperatures and dust to varied terrain and field sizes — ensuring reliable performance across regions.',
+                        backgroundImage: '/images/p10pro-bannershot.png',
                     },
                     {
-                        title: 'Subject Tracking',
-                        description: 'ActiveTrack 5.0 keeps your subject perfectly framed even during high-speed movement. Predict and follow with unmatched precision.',
-                        backgroundImage: '',
+                        title: 'COMPACT BY DESIGN',
+                        description: 'The P10 Pro features the most compact airframe in its class among Indian agricultural drones, enabling rapid deployment, easier transport, and operation in confined or fragmented farmlands without compromising payload capability.',
+                        backgroundImage: '/images/p10pro-compact.png',
+
                     },
                 ]}
             />
@@ -64,19 +88,20 @@ export default function P10ProPage() {
             <Slider
                 slides={[
                     {
-                        title: '45-Minute Flight Time',
-                        description: 'Industry-leading battery technology delivers up to 45 minutes of continuous flight. Quick-swap design for uninterrupted operation.',
-                        backgroundImage: '/images/p10layout4.jpg',
+                        title: 'DAY & NIGHT OPERATIONS',
+                        description: 'Engineered for extended operational windows, the P10 Pro supports both daytime and night-time missions, enabling farmers and operators to maximize productivity during optimal spraying conditions.',
+                        backgroundImage: '/images/p10pro-night.png',
                     },
                     {
-                        title: 'Rapid Charging',
-                        description: 'Fast-charge capability gets you back in the air in just 60 minutes. Intelligent battery management extends overall lifespan.',
+                        title: 'AUTONOMOUS FIELD OPERATIONS',
+                        description: 'Designed for fully autonomous missions, the P10 Pro executes predefined flight paths with centimeter-level accuracy. Terrain-following and obstacle avoidance allow safe operation in complex agricultural environments without constant human intervention.',
                         backgroundImage: '',
                     },
                     {
-                        title: 'All-Weather Ready',
-                        description: 'IP54 weather resistance rating. Operate in rain, dust, and temperatures from -10°C to 40°C with confidence.',
-                        backgroundImage: '',
+                        title: 'PRECISION SPRAYING',
+                        description: 'The P10 Pro delivers uniform chemical distribution through an intelligent spraying system that dynamically adjusts flow rate based on speed, altitude, and payload weight. This ensures optimal coverage while minimizing chemical waste and environmental impact.',
+                        backgroundImage: '/images/p10pro-spray.png',
+
                     },
                 ]}
             />
@@ -84,13 +109,13 @@ export default function P10ProPage() {
             <Slider
                 slides={[
                     {
-                        title: 'Enterprise Ready',
-                        description: 'Integrated SDK and developer tools for custom applications. Thermal imaging capability and RTK positioning for industrial precision.',
+                        title: 'Become a Franchisee',
+                        description: 'Become a franchisee and expand your agricultural spraying operations with the P10 Pro. Our franchise program offers a structured path to success, providing training, support, and resources to help you grow your business.',
                         backgroundImage: '/images/p10layout5.jpg',
                     },
                     {
-                        title: 'Fleet Management',
-                        description: 'Connect multiple P10 Pro units for coordinated operations. Cloud-based fleet management with real-time telemetry and monitoring.',
+                        title: 'Become a Pilot',
+                        description: 'Become a pilot and expand your agricultural spraying operations with the P10 Pro. Our franchise program offers a structured path to success, providing training, support, and resources to help you grow your business.',
                         backgroundImage: '',
                     },
                 ]}

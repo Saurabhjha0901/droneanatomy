@@ -203,6 +203,7 @@
         min-height: auto;
         display: flex;
         flex-direction: column;
+        padding: 0;
     }
 
     .backgroundContainer {
@@ -267,5 +268,6 @@
         transform: none;
         justify-content: center;
         margin-top: var(--spacing-xl);
+        display: none;
     }
 }
