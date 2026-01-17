@@ -41,7 +41,7 @@
     visibility: hidden;
     border-radius: 4px;
     padding-top: var(--spacing-2xl);
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     transition: all var(--transition-base);
     z-index: var(--z-dropdown);
 }

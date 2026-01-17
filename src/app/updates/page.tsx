@@ -1,4 +1,4 @@
-import { Banner } from '@/components';
+import { Banner, Newsletter } from '@/components';
 
 export const metadata = {
     title: 'Updates | DroneAnatomy',
@@ -10,9 +10,12 @@ export default function UpdatesPage() {
         <>
             <Banner
                 title="Updates"
-                subtitle="Stay informed with the latest news from DroneAnatomy. Product launches, company announcements, and industry insights."
-                contentPosition="center-left"
+                titleSize='hero'
+                subtitle="Enter your email to sign up for DroneAnatomy updates"
+                contentPosition="center"
+                textAlign='center'
                 overlayStyle="dark"
+                showEmailSignup
             />
 
             <Banner

@@ -26,6 +26,7 @@ export interface BannerProps {
     contentPosition?: ContentPosition;
     overlayStyle?: 'dark' | 'light' | 'none';
     showScrollIndicator?: boolean;
+    showEmailSignup?: boolean;
     textAlign?: 'left' | 'center' | 'right' | 'justify';
     titleSize?: 'sm' | 'md' | 'lg' | 'xl' | 'hero';
     animate?: boolean;
@@ -63,6 +64,7 @@ export const Banner: React.FC<BannerProps> = ({
     contentPosition = 'bottom-left',
     overlayStyle = 'dark',
     showScrollIndicator = false,
+    showEmailSignup = false,
     textAlign,
     titleSize,
     animate = false,
@@ -70,6 +72,8 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [email, setEmail] = useState('');
+    const [submitted, setSubmitted] = useState(false);
 
     // Check if mobile on mount and resize
     useEffect(() => {
@@ -111,6 +115,16 @@ export const Banner: React.FC<BannerProps> = ({
             top: window.innerHeight,
             behavior: 'smooth',
         });
+    };
+
+    const handleEmailSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (email) {
+            console.log('Email signup:', email);
+            setSubmitted(true);
+            setEmail('');
+            setTimeout(() => setSubmitted(false), 3000);
+        }
     };
 
     const positionClass = positionClassMap[contentPosition];
@@ -173,6 +187,21 @@ export const Banner: React.FC<BannerProps> = ({
                         <p className={`${styles.subtitle} ${animate ? styles.animateSlideUpDelay : ''}`}>
                             {subtitle}
                         </p>
+                    )}
+                    {showEmailSignup && (
+                        <form className={styles.emailForm} onSubmit={handleEmailSubmit}>
+                            <input
+                                type="email"
+                                className={styles.emailInput}
+                                placeholder="Your email address"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button type="submit" className={styles.emailSubmit}>
+                                {submitted ? 'Thank you!' : 'Submit'}
+                            </button>
+                        </form>
                     )}
                     {ctaText && (
                         <div className={styles.ctaWrapper}>
