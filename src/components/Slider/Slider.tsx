@@ -92,8 +92,8 @@ export const Slider: React.FC<SliderProps> = ({
                         ref={bgVideoRef}
                         className={styles.backgroundVideo}
                         src={currentSlide.backgroundVideo}
+                        autoPlay
                         muted
-                        loop
                         playsInline
                     />
                 ) : currentSlide.backgroundImage ? (
@@ -163,7 +163,7 @@ export const Slider: React.FC<SliderProps> = ({
                                 className={styles.sideVideo}
                                 src={currentSlide.sideVideo}
                                 muted
-                                loop
+                                autoPlay
                                 playsInline
                             />
                         ) : currentSlide.sideImage ? (
