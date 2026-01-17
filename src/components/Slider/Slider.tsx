@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import styles from './Slider.module.css';
 
 export interface SpecItem {
@@ -11,7 +11,10 @@ export interface SpecItem {
 export interface SlideItem {
     title: string;
     description: string;
-    backgroundImage: string;
+    backgroundImage?: string;
+    backgroundVideo?: string;
+    sideImage?: string;
+    sideVideo?: string;
     specs?: SpecItem[];
 }
 
@@ -25,6 +28,42 @@ export const Slider: React.FC<SliderProps> = ({
     className = '',
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isInView, setIsInView] = useState(false);
+    const sliderRef = useRef<HTMLElement>(null);
+    const bgVideoRef = useRef<HTMLVideoElement>(null);
+    const sideVideoRef = useRef<HTMLVideoElement>(null);
+
+    // IntersectionObserver to detect when slider is in view
+    useEffect(() => {
+        const slider = sliderRef.current;
+        if (!slider) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsInView(entry.isIntersecting);
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(slider);
+        return () => observer.disconnect();
+    }, []);
+
+    // Play/pause videos based on visibility
+    useEffect(() => {
+        const bgVideo = bgVideoRef.current;
+        const sideVideo = sideVideoRef.current;
+
+        if (isInView) {
+            bgVideo?.play().catch(() => { });
+            sideVideo?.play().catch(() => { });
+        } else {
+            bgVideo?.pause();
+            sideVideo?.pause();
+        }
+    }, [isInView, currentIndex]);
 
     const goToPrevious = useCallback(() => {
         setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -41,17 +80,30 @@ export const Slider: React.FC<SliderProps> = ({
     if (!slides.length) return null;
 
     const currentSlide = slides[currentIndex];
+    const hasBackground = currentSlide.backgroundImage || currentSlide.backgroundVideo;
+    const hasSideMedia = currentSlide.sideImage || currentSlide.sideVideo;
 
     return (
-        <section className={`${styles.slider} ${className}`}>
-            {/* Background Image */}
+        <section ref={sliderRef} className={`${styles.slider} ${hasSideMedia ? styles.sliderWithSide : ''} ${className}`}>
+            {/* Background */}
             <div className={styles.backgroundContainer}>
-                <img
-                    src={currentSlide.backgroundImage}
-                    alt=""
-                    className={styles.backgroundImage}
-                />
-                <div className={styles.overlay} />
+                {currentSlide.backgroundVideo ? (
+                    <video
+                        ref={bgVideoRef}
+                        className={styles.backgroundVideo}
+                        src={currentSlide.backgroundVideo}
+                        muted
+                        loop
+                        playsInline
+                    />
+                ) : currentSlide.backgroundImage ? (
+                    <img
+                        src={currentSlide.backgroundImage}
+                        alt=""
+                        className={styles.backgroundImage}
+                    />
+                ) : null}
+                {hasBackground && <div className={styles.overlay} />}
             </div>
 
             {/* Content */}
@@ -101,6 +153,28 @@ export const Slider: React.FC<SliderProps> = ({
                         </div>
                     )}
                 </div>
+
+                {/* Side Image/Video */}
+                {hasSideMedia && (
+                    <div className={styles.sideMedia}>
+                        {currentSlide.sideVideo ? (
+                            <video
+                                ref={sideVideoRef}
+                                className={styles.sideVideo}
+                                src={currentSlide.sideVideo}
+                                muted
+                                loop
+                                playsInline
+                            />
+                        ) : currentSlide.sideImage ? (
+                            <img
+                                src={currentSlide.sideImage}
+                                alt=""
+                                className={styles.sideImage}
+                            />
+                        ) : null}
+                    </div>
+                )}
             </div>
 
             {/* Desktop Navigation Arrows */}

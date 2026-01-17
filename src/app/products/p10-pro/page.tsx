@@ -11,21 +11,34 @@ export default function P10ProPage() {
             <Banner
                 title="P10 Pro"
                 titleSize='hero'
-                subtitle="Advanced Aerial Intelligence for Modern Agriculture"
+                subtitle="Agriculture Drone, Made For Indian Conditions"
                 contentPosition="center"
                 backgroundImage='/images/IMG_7150.PNG'
+                // backgroundVideo='/videos/opening-drone.mp4'
                 overlayStyle="dark"
                 textAlign='center'
                 showScrollIndicator
                 animate={true}
             />
+            {/* <Banner
+                title=""
+                titleSize='hero'
+                subtitle=""
+                contentPosition="center"
+                // backgroundImage='/images/IMG_7150.PNG'
+                backgroundVideo='/videos/opening-drone.mp4'
+                overlayStyle="dark"
+                textAlign='center'
+            /> */}
 
             <Slider
                 slides={[
                     {
                         title: 'P10 Pro Overview',
                         description: "The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, P10 Pro integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
-                        backgroundImage: '/images/p10pro-overview.png',
+                        // backgroundImage: '/images/p10pro-overview.png',
+                        backgroundVideo: '/videos/drone-show.mp4',
+                        // sideVideo: '/videos/opening-drone.mp4',
                         specs: [
                             { label: 'Max Flight Time', value: '30 minutes' },
                             { label: 'Payload Capacity', value: '10kg' },
@@ -69,7 +82,27 @@ export default function P10ProPage() {
                 ]}
             />
 
-            <Slider
+            <Banner
+                title="Max Flow Rate"
+                titleSize='sm'
+                subtitle="Up to 5L/min"
+                contentPosition="bottom-left"
+                backgroundVideo='/videos/spray.mp4'
+                overlayStyle="dark"
+                textAlign='left'
+            />
+
+            <Banner
+                title="Night Flying Capability - Equipped with bright LED lights"
+                titleSize='sm'
+                subtitle="Enhanced Visibility and Safety during nighttime operations"
+                contentPosition="top-left"
+                backgroundVideo='/videos/night-video.mp4'
+                overlayStyle="light"
+                textAlign='left'
+            />
+
+            {/* <Slider
                 slides={[
                     {
                         title: 'MADE IN INDIA. BUILT FOR INDIA.',
@@ -83,9 +116,9 @@ export default function P10ProPage() {
 
                     },
                 ]}
-            />
+            /> */}
 
-            <Slider
+            {/* <Slider
                 slides={[
                     {
                         title: 'DAY & NIGHT OPERATIONS',
@@ -104,9 +137,9 @@ export default function P10ProPage() {
 
                     },
                 ]}
-            />
+            /> */}
 
-            <Slider
+            {/* <Slider
                 slides={[
                     {
                         title: 'Become a Franchisee',
@@ -119,6 +152,15 @@ export default function P10ProPage() {
                         backgroundImage: '',
                     },
                 ]}
+            /> */}
+            <Banner
+                title=""
+                titleSize='hero'
+                subtitle=""
+                contentPosition="center"
+                backgroundImage='/images/agri-banner-4.png'
+                overlayStyle="dark"
+                textAlign='center'
             />
 
             <Newsletter />

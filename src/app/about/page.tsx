@@ -11,7 +11,7 @@ export default function AboutPage() {
             <Banner
                 subtitle="We're on a mission to revolutionize industries through advanced aerial technology. Founded by aerospace engineers and drone enthusiasts."
                 contentPosition="center"
-                backgroundImage="/images/aboutlayout1.jpg"
+                backgroundImage="/images/about-home.png"
                 textAlign="center"
             />
 
