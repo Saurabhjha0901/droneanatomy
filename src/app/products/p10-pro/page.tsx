@@ -13,23 +13,14 @@ export default function P10ProPage() {
                 titleSize='hero'
                 subtitle="Agriculture Drone, Made For Indian Conditions"
                 contentPosition="center"
-                backgroundImage='/images/IMG_7150.PNG'
+                backgroundImage='/images/p10pro-hero.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
                 overlayStyle="dark"
                 textAlign='center'
                 showScrollIndicator
                 animate={true}
             />
-            {/* <Banner
-                title=""
-                titleSize='hero'
-                subtitle=""
-                contentPosition="center"
-                // backgroundImage='/images/IMG_7150.PNG'
-                backgroundVideo='/videos/opening-drone.mp4'
-                overlayStyle="dark"
-                textAlign='center'
-            /> */}
+
 
             <Slider
                 slides={[
