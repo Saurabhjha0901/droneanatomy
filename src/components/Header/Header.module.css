@@ -39,9 +39,8 @@
 }
 
 .logoImage {
-    height: 32px;
+    height: 36px;
     width: auto;
-    filter: invert(1);
 }
 
 .logoText {
