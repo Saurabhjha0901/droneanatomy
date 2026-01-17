@@ -1,4 +1,4 @@
-import { Banner, Slider, Newsletter } from '@/components';
+import { Banner, Slider, Newsletter, FeatureShowcase } from '@/components';
 
 export const metadata = {
     title: 'P10 Pro | DroneAnatomy',
@@ -12,7 +12,7 @@ export default function P10ProPage() {
                 title="P10 Pro"
                 titleSize='hero'
                 subtitle="Agriculture Drone, Made For Indian Conditions"
-                contentPosition="center"
+                contentPosition="center-left"
                 backgroundImage='/images/p10pro-hero.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
                 overlayStyle="dark"
@@ -37,39 +37,39 @@ export default function P10ProPage() {
                             { label: 'POSITIONING SYSTEM', value: 'GPS Assisted Navigation' },
                         ],
                     },
-                    {
-                        title: 'POWER SYSTEM',
-                        description: 'The Agri Drone P10 Pro power system is designed for high-discharge agricultural missions, delivering consistent output under heavy payload and low-altitude flight conditions. Intelligent power management ensures stable performance, extended battery life, and safe operation across varying environmental conditions.',
-                        backgroundImage: '/images/battery.png',
-                        specs: [
-                            { label: 'BATTERY TYPE', value: 'Li-ion, 12S' },
-                            { label: 'NOMINAL VOLTAGE', value: '44.4 V' },
-                            { label: 'BATTERY CAPACITY', value: '16000mAh' },
-                            { label: 'CHARGING TIME', value: '20 minutes' },
-                        ],
-                    },
-                    {
-                        title: 'PROPULSION SYSTEM',
-                        description: 'The propulsion system of the P10 Pro is optimized for efficient lift, precise control, and long-term durability. Tuned specifically for agricultural workloads, it maintains stability during spraying while minimizing vibration and power loss.',
-                        backgroundImage: '/images/p10pro-propulsion.png',
-                        specs: [
-                            { label: 'MOTOR TYPE', value: 'Brushless outrunner ×4' },
-                            { label: 'PROPELLER DIAMETER', value: '24 in' },
-                            { label: 'MAX THRUST', value: '20000g' },
-                            { label: 'MAX RPM', value: '10000 RPM' },
-                        ],
-                    },
-                    {
-                        title: 'REMOTE & CONTROL APPLICATION',
-                        description: 'The Agri Drone P10 Pro control ecosystem combines a dedicated industrial-grade remote controller with a proprietary mobile application, enabling precise mission planning, real-time monitoring, and reliable command execution in field conditions.',
-                        backgroundImage: '',
-                        specs: [
-                            { label: 'CONTROL INTERFACE', value: 'Dedicated remote controller + mobile application' },
-                            { label: 'MAX CONTROL RANGE', value: 'Up to 1 km (line of sight)' },
-                            { label: 'MISSION PLANNING', value: 'Waypoint-based autonomous operation' },
-                            { label: 'OPERATING FREQUENCY', value: '2.4GHz/5.8GHz' },
-                        ],
-                    },
+                    // {
+                    //     title: 'POWER SYSTEM',
+                    //     description: 'The Agri Drone P10 Pro power system is designed for high-discharge agricultural missions, delivering consistent output under heavy payload and low-altitude flight conditions. Intelligent power management ensures stable performance, extended battery life, and safe operation across varying environmental conditions.',
+                    //     backgroundImage: '/images/battery.png',
+                    //     specs: [
+                    //         { label: 'BATTERY TYPE', value: 'Li-ion, 12S' },
+                    //         { label: 'NOMINAL VOLTAGE', value: '44.4 V' },
+                    //         { label: 'BATTERY CAPACITY', value: '16000mAh' },
+                    //         { label: 'CHARGING TIME', value: '20 minutes' },
+                    //     ],
+                    // },
+                    // {
+                    //     title: 'PROPULSION SYSTEM',
+                    //     description: 'The propulsion system of the P10 Pro is optimized for efficient lift, precise control, and long-term durability. Tuned specifically for agricultural workloads, it maintains stability during spraying while minimizing vibration and power loss.',
+                    //     backgroundImage: '/images/p10pro-propulsion.png',
+                    //     specs: [
+                    //         { label: 'MOTOR TYPE', value: 'Brushless outrunner ×4' },
+                    //         { label: 'PROPELLER DIAMETER', value: '24 in' },
+                    //         { label: 'MAX THRUST', value: '20000g' },
+                    //         { label: 'MAX RPM', value: '10000 RPM' },
+                    //     ],
+                    // },
+                    // {
+                    //     title: 'REMOTE & CONTROL APPLICATION',
+                    //     description: 'The Agri Drone P10 Pro control ecosystem combines a dedicated industrial-grade remote controller with a proprietary mobile application, enabling precise mission planning, real-time monitoring, and reliable command execution in field conditions.',
+                    //     backgroundImage: '',
+                    //     specs: [
+                    //         { label: 'CONTROL INTERFACE', value: 'Dedicated remote controller + mobile application' },
+                    //         { label: 'MAX CONTROL RANGE', value: 'Up to 1 km (line of sight)' },
+                    //         { label: 'MISSION PLANNING', value: 'Waypoint-based autonomous operation' },
+                    //         { label: 'OPERATING FREQUENCY', value: '2.4GHz/5.8GHz' },
+                    //     ],
+                    // },
                 ]}
             />
 
@@ -79,7 +79,7 @@ export default function P10ProPage() {
                 subtitle="Up to 5L/min"
                 contentPosition="bottom-left"
                 backgroundVideo='/videos/spray.mp4'
-                overlayStyle="dark"
+                overlayStyle="light"
                 textAlign='left'
             />
 
@@ -144,13 +144,43 @@ export default function P10ProPage() {
                     },
                 ]}
             /> */}
+
+            <FeatureShowcase
+                title="Introducing India's First Ultra-Compact Agricultural Drone!"
+                features={[
+                    'Light enough to carry anywhere.',
+                    'Made for Indian conditions.',
+                    'Saves transportation costs.',
+                    'Covers 1 Acre in 5 Minutes.',
+                    'Ultra Fast battery charging.',
+                ]}
+                ctaText="Questions? Contact Today!"
+                ctaLink="/contact"
+                mainImage="/images/p10pro-bannershot.png"
+                galleryImages={[
+                    '/images/portable1.png',
+                    '/images/portable2.png',
+                    '/images/portable3.png',
+                    '/images/portable4.png',
+                ]}
+            />
+            <Banner
+                title=""
+                titleSize='hero'
+                subtitle=""
+                contentPosition="center"
+                backgroundImage='/images/p10pro-comparison.png'
+                overlayStyle="light"
+                textAlign='center'
+            />
+
             <Banner
                 title=""
                 titleSize='hero'
                 subtitle=""
                 contentPosition="center"
                 backgroundImage='/images/agri-banner-4.png'
-                overlayStyle="dark"
+                overlayStyle="light"
                 textAlign='center'
             />
 

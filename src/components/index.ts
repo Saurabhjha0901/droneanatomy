@@ -11,6 +11,7 @@ export { Card } from './Card';
 export { CardGrid } from './CardGrid';
 export { Slider } from './Slider';
 export { Newsletter } from './Newsletter';
+export { FeatureShowcase } from './FeatureShowcase';
 
 // Types
 export type { CTAButtonProps } from './CTAButton';
@@ -23,3 +24,4 @@ export type { CardProps } from './Card';
 export type { CardGridProps } from './CardGrid';
 export type { SliderProps, SlideItem, SpecItem } from './Slider';
 export type { NewsletterProps } from './Newsletter';
+export type { FeatureShowcaseProps } from './FeatureShowcase';

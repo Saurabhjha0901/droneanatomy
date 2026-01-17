@@ -8,12 +8,15 @@ import styles from './Header.module.css';
 const productItems = [
     { label: 'P10 Pro', href: '/products/p10-pro' },
     { label: 'Drone Pro', href: '/products/drone-x1' },
+];
 
+const companyItems = [
+    { label: 'Mission', href: '/about' },
+    { label: 'Updates', href: '/updates' },
+    { label: 'Careers', href: '/careers' },
 ];
 
 const navItems = [
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
     { label: 'Launches', href: '/launches' },
 ];
 
@@ -89,6 +92,9 @@ export const Header: React.FC = () => {
                         <li>
                             <Dropdown label="Vehicles" items={productItems} />
                         </li>
+                        <li>
+                            <Dropdown label="Company" items={companyItems} />
+                        </li>
                         {navItems.map((item) => (
                             <li key={item.label}>
                                 <a href={item.href} className={styles.navLink}>
@@ -153,6 +159,9 @@ export const Header: React.FC = () => {
                     <ul className={styles.mobileNavList}>
                         <li>
                             <Dropdown label="Products" items={productItems} />
+                        </li>
+                        <li>
+                            <Dropdown label="Company" items={companyItems} />
                         </li>
                         {navItems.map((item) => (
                             <li key={item.label}>
