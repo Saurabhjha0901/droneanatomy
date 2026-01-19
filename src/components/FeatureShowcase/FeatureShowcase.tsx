@@ -23,6 +23,13 @@ export const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({
     galleryImages,
     className = '',
 }) => {
+    const handleScrollToFooter = () => {
+        const footer = document.querySelector('footer');
+        if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className={`${styles.showcase} ${className}`}>
             {/* Hero Section */}
@@ -48,9 +55,13 @@ export const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({
                         ))}
                     </ul>
                     {ctaText && (
-                        <CTAButton href={ctaLink} variant="secondary">
+                        <button
+                            type="button"
+                            className={styles.ctaButton}
+                            onClick={handleScrollToFooter}
+                        >
                             {ctaText}
-                        </CTAButton>
+                        </button>
                     )}
                 </div>
                 <div className={styles.mainImageContainer}>

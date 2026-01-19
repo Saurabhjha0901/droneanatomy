@@ -7,7 +7,6 @@ import styles from './Header.module.css';
 
 const productItems = [
     { label: 'P10 Pro', href: '/products/p10-pro' },
-    { label: 'Drone Pro', href: '/products/drone-x1' },
 ];
 
 const companyItems = [

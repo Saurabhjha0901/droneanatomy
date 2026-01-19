@@ -72,7 +72,7 @@ export default function P10ProPage() {
                     'Ultra Fast battery charging.',
                 ]}
                 ctaText="Questions? Contact Today!"
-                ctaLink="/contact"
+                // ctaLink="/contact"
                 mainImage="/images/p10pro-bannershot.png"
                 galleryImages={[
                     '/images/portable1.png',

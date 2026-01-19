@@ -7,7 +7,7 @@ const footerLinks = [
     { label: 'Careers', href: '/careers' },
     { label: 'Updates', href: '/updates' },
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Suppliers', href: '/suppliers' },
+    { label: 'P10 Pro', href: '/p10-pro' },
 ];
 
 export const Footer: React.FC = () => {

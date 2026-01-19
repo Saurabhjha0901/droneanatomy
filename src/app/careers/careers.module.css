@@ -66,7 +66,37 @@
     margin-bottom: var(--spacing-3xl);
 }
 
-/* Search Form */
+/* CTA Buttons */
+.ctaButtons {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.ctaButton {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.ctaButton:hover {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+}
+
+/* Search Form - Legacy */
 .searchForm {
     width: 100%;
     display: flex;
