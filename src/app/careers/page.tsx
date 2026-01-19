@@ -10,6 +10,16 @@ export default function CareersPage() {
 
     return (
         <section className={styles.careersHero}>
+            {/* Background Image */}
+            <div className={styles.backgroundContainer}>
+                <img
+                    src="/images/careers-hero.jpg"
+                    alt=""
+                    className={styles.backgroundImage}
+                />
+                <div className={styles.overlay} />
+            </div>
+
             <div className={styles.content}>
                 <h1 className={styles.title}>Find Your Future</h1>
                 <p className={styles.subtitle}>
