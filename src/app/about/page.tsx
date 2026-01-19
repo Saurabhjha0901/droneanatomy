@@ -10,7 +10,7 @@ export default function AboutPage() {
         <>
             <Banner
                 title="Our Belief"
-                subtitle="'The future of flight is autonomous and building it responsibly is one of the most important engineering challenges of our time.'"
+                subtitle="The future of flight is autonomous and building it responsibly is one of the most important engineering challenges of our time."
                 contentPosition="center"
                 backgroundImage="/images/about-home.png"
                 textAlign="center"
@@ -66,62 +66,62 @@ export default function AboutPage() {
                     {
                         preTitle: '2015',
                         title: 'The Beginning',
-                        description: 'DroneAnatomy was founded by a team of aerospace engineers with a vision to revolutionize aerial technology.',
-                        image: '/images/DSC07310.JPG',
+                        description: "Saurabh started with Drones at the age of 15 and got Awarded in the National Science Exhibition.",
+                        image: '/images/j4.JPG',
                     },
                     {
                         preTitle: '2016',
-                        title: 'First Product Launch',
-                        description: 'We launched our first commercial drone, setting new standards for reliability and performance.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Explored industry and met Mayank.',
+                        description: "When two minds with a shared passion come together, great things happen - let's make magic!",
+                        image: '/images/j6.JPG',
                     },
                     {
                         preTitle: '2017',
-                        title: 'Enterprise Solutions',
-                        description: 'Expanded into enterprise solutions, partnering with major corporations for industrial applications.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Excited from the business potential started with their first office.',
+                        description: "The feeling of making money together as a team is like rocket fuel for your business - let's keep the momentum going and reach for the stars!",
+                        image: '/images/j9.JPG',
                     },
                     {
                         preTitle: '2018',
-                        title: 'Global Recognition',
-                        description: 'Received international awards for innovation and established presence in 10 countries.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Started delivering Made in India drones to Indian Army & met Dipanshu.',
+                        description: "Our first product delivery is just the beginning - we're paving the way for a future full of innovation and success!",
+                        image: '/images/j12.JPG',
                     },
                     {
                         preTitle: '2019',
-                        title: 'Research & Development',
-                        description: 'Opened our advanced R&D facility, pushing boundaries in autonomous flight technology.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Started making high pay load drones which market required.',
+                        description: "Smart entrepreneurs pivot with the market - by adapting to changing demands, we're not just surviving, we're thriving!",
+                        image: '/images/j.JPG',
                     },
                     {
                         preTitle: '2020',
-                        title: 'Sustainable Innovation',
-                        description: 'Launched eco-friendly drone line with extended battery life and recyclable components.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Actual implementation of high pay load drones during covid for santization purposes.',
+                        description: "Risk-taking meets innovation - using drones to sanitize in the time of COVID, we're not just adapting, we're changing the game!",
+                        image: '/images/j10.JPG',
                     },
                     {
                         preTitle: '2021',
-                        title: 'AI Integration',
-                        description: 'Integrated advanced AI capabilities for smarter navigation and obstacle avoidance.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'Advancement of business growth',
+                        description: "Advancing in business is not just about reaching new heights - it's about pushing past boundaries, breaking through barriers, and achieving the impossible!",
+                        image: '/images/j11.JPG',
                     },
                     {
                         preTitle: '2022',
-                        title: 'Industry Leadership',
-                        description: 'Became the leading drone manufacturer in the enterprise sector with record sales.',
-                        image: '/images/DSC07310.JPG',
+                        title: 'THROTTLE UP :)',
+                        description: "'Building a team is not just about growing headcount - it's about cultivating a community of leaders, empowering individuals to reach their full potential, and achieving collective greatness!'  so founded DAstrionics technologies Pvt Ltd with a vison to make in India for the world.",
+                        image: '/images/j3.JPG',
                     },
                     {
                         preTitle: '2023',
                         title: 'Next-Gen Platform',
                         description: 'Unveiled our next-generation drone platform with revolutionary modular design.',
-                        image: '/images/DSC07310.JPG',
+                        image: '/images/j5.JPG',
                     },
                     {
                         preTitle: '2024',
                         title: 'Service Expansion',
                         description: 'Launched comprehensive drone-as-a-service offerings for businesses of all sizes.',
-                        image: '/images/DSC07310.JPG',
+                        image: '/images/j8.JPG',
                     },
                     {
                         preTitle: '2025',
