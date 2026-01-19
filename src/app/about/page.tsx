@@ -9,7 +9,8 @@ export default function AboutPage() {
     return (
         <>
             <Banner
-                subtitle="We're on a mission to revolutionize industries through advanced aerial technology. Founded by aerospace engineers and drone enthusiasts."
+                title="Our Belief"
+                subtitle="'The future of flight is autonomous and building it responsibly is one of the most important engineering challenges of our time.'"
                 contentPosition="center"
                 backgroundImage="/images/about-home.png"
                 textAlign="center"

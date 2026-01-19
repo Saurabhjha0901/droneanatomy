@@ -178,7 +178,7 @@ export const Slider: React.FC<SliderProps> = ({
             </div>
 
             {/* Desktop Navigation Arrows */}
-            <button
+            {/* <button
                 type="button"
                 className={`${styles.navArrow} ${styles.navArrowLeft}`}
                 onClick={goToPrevious}
@@ -197,10 +197,10 @@ export const Slider: React.FC<SliderProps> = ({
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="9 18 15 12 9 6" />
                 </svg>
-            </button>
+            </button> */}
 
             {/* Dot Indicators */}
-            <div className={styles.dots}>
+            {/* <div className={styles.dots}>
                 {slides.map((_, index) => (
                     <button
                         key={index}
@@ -210,7 +210,7 @@ export const Slider: React.FC<SliderProps> = ({
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}
-            </div>
+            </div> */}
         </section>
     );
 };
