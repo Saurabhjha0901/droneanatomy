@@ -183,6 +183,15 @@
     /* max-width: 480px; */
 }
 
+/* Text Color Options */
+.textBlack {
+    color: #000000 !important;
+}
+
+.textWhite {
+    color: #ffffff !important;
+}
+
 .ctaWrapper {
     margin-top: var(--spacing-xl);
 }

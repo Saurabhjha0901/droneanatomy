@@ -31,6 +31,7 @@ export interface BannerProps {
     titleSize?: 'sm' | 'md' | 'lg' | 'xl' | 'hero';
     animate?: boolean;
     className?: string;
+    textColor?: 'black' | 'white';
 }
 
 const titleSizeClassMap: Record<string, string> = {
@@ -69,6 +70,7 @@ export const Banner: React.FC<BannerProps> = ({
     titleSize,
     animate = false,
     className = '',
+    textColor,
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -179,12 +181,12 @@ export const Banner: React.FC<BannerProps> = ({
                     } : undefined}
                 >
                     {title && (
-                        <h2 className={`${styles.title} ${titleSize ? titleSizeClassMap[titleSize] : ''} ${animate ? styles.animateSlideUp : ''}`}>
+                        <h2 className={`${styles.title} ${titleSize ? titleSizeClassMap[titleSize] : ''} ${animate ? styles.animateSlideUp : ''} ${textColor ? styles[`text${textColor.charAt(0).toUpperCase() + textColor.slice(1)}`] : ''}`}>
                             {title}
                         </h2>
                     )}
                     {subtitle && (
-                        <p className={`${styles.subtitle} ${animate ? styles.animateSlideUpDelay : ''}`}>
+                        <p className={`${styles.subtitle} ${animate ? styles.animateSlideUpDelay : ''} ${textColor ? styles[`text${textColor.charAt(0).toUpperCase() + textColor.slice(1)}`] : ''}`}>
                             {subtitle}
                         </p>
                     )}
