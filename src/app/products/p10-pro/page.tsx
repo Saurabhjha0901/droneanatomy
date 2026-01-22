@@ -13,7 +13,7 @@ export default function P10ProPage() {
                 // titleSize='hero'
                 subtitle="Agriculture Drone, Made For Indian Conditions"
                 contentPosition="center-left"
-                backgroundImage='/images/p10pro-hero.png'
+                backgroundImage='/images/p10.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
                 overlayStyle="dark"
                 textAlign='left'
