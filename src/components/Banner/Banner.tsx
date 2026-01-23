@@ -32,7 +32,14 @@ export interface BannerProps {
     animate?: boolean;
     className?: string;
     textColor?: 'black' | 'white';
+    subtitleSize?: 'sm' | 'md' | 'lg';
 }
+
+const subtitleSizeClassMap: Record<string, string> = {
+    'sm': styles.subtitleSm,
+    'md': styles.subtitleMd,
+    'lg': styles.subtitleLg,
+};
 
 const titleSizeClassMap: Record<string, string> = {
     'sm': styles.titleSm,
@@ -71,6 +78,7 @@ export const Banner: React.FC<BannerProps> = ({
     animate = false,
     className = '',
     textColor,
+    subtitleSize,
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -186,7 +194,7 @@ export const Banner: React.FC<BannerProps> = ({
                         </h2>
                     )}
                     {subtitle && (
-                        <p className={`${styles.subtitle} ${animate ? styles.animateSlideUpDelay : ''} ${textColor ? styles[`text${textColor.charAt(0).toUpperCase() + textColor.slice(1)}`] : ''}`}>
+                        <p className={`${styles.subtitle} ${subtitleSize ? subtitleSizeClassMap[subtitleSize] : ''} ${animate ? styles.animateSlideUpDelay : ''} ${textColor ? styles[`text${textColor.charAt(0).toUpperCase() + textColor.slice(1)}`] : ''}`}>
                             {subtitle}
                         </p>
                     )}

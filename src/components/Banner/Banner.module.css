@@ -179,8 +179,21 @@
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-text-primary);
-    margin-top: 15px;
+    margin-top: 10px;
     /* max-width: 480px; */
+}
+
+.subtitleSm {
+    font-size: var(--font-size-sm);
+}
+
+.subtitleMd {
+    font-size: var(--font-size-md);
+}
+
+.subtitleLg {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
 }
 
 /* Text Color Options */

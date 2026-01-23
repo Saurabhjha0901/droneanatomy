@@ -1,24 +1,23 @@
 import { Banner, Slider, Newsletter, FeatureShowcase } from '@/components';
 
 export const metadata = {
-    title: 'P10 Pro | DroneAnatomy',
-    description: 'P10 Pro - The ultimate professional drone with advanced AI capabilities and unmatched performance.',
+    title: 'NOXR-1 | DroneAnatomy',
+    description: 'NOXR-1 - The ultimate professional drone with advanced AI capabilities and unmatched performance.',
 };
 
-export default function P10ProPage() {
+export default function Noxr1Page() {
     return (
         <>
             <Banner
-                title="P10 Pro"
+                title="NOXR-1"
                 titleSize='hero'
                 subtitle="AGRICULTURE DRONE, MADE FOR INDIAN CONDITIONS."
                 contentPosition="center-left"
                 backgroundImage='/images/p10.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
-                overlayStyle="none"
-                textAlign='center'
+                overlayStyle="dark"
+                textAlign='left'
                 showScrollIndicator
-                subtitleSize='sm'
                 animate={true}
             />
 
@@ -26,8 +25,8 @@ export default function P10ProPage() {
             <Slider
                 slides={[
                     {
-                        title: 'P10 Pro Overview',
-                        description: "The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, P10 Pro integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
+                        title: 'NOXR-1 Overview',
+                        description: "The Drone Anatomy NOXR-1 is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, NOXR-1 integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
                         // backgroundImage: '/images/p10pro-overview.png',
                         backgroundVideo: '/videos/drone-show.mp4',
                         // sideVideo: '/videos/opening-drone.mp4',
@@ -86,7 +85,7 @@ export default function P10ProPage() {
             <div className="comp-banner">
                 <div className="comp-banner-content">
                     <h3>NOTE:</h3>
-                    <p>The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations.</p>
+                    <p>The Drone Anatomy NOXR-1 is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations.</p>
                 </div>
             </div>
             <Newsletter />
