@@ -3,6 +3,7 @@
 import React from 'react';
 import { CTAButton } from '../CTAButton';
 import styles from './FeatureShowcase.module.css';
+import { CustomButton } from '../CustomButton';
 
 export interface FeatureShowcaseProps {
     title: string;
@@ -55,13 +56,12 @@ export const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({
                         ))}
                     </ul>
                     {ctaText && (
-                        <button
-                            type="button"
+                        <CustomButton
+                            href={ctaLink}
                             className={styles.ctaButton}
-                            onClick={handleScrollToFooter}
                         >
                             {ctaText}
-                        </button>
+                        </CustomButton>
                     )}
                 </div>
                 <div className={styles.mainImageContainer}>

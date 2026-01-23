@@ -315,6 +315,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         padding: var(--spacing-lg) var(--spacing-md);
+        padding-bottom: var(--spacing-4xl);
     }
 
     .content {
@@ -335,13 +336,14 @@
         grid-column: 1;
         grid-row: 1;
         justify-self: start;
-        align-self: center;
+        align-self: end;
     }
 
     .title {
         font-size: 2.25rem;
         line-height: 95%;
     }
+
 
     .subtitle {
         font-size: var(--font-size-sm);
@@ -351,6 +353,11 @@
 @media (max-width: 640px) {
     .title {
         font-size: 2rem;
+    }
+
+    .titleHero {
+        font-size: 3rem;
+        text-align: center;
     }
 
     .banner {

@@ -436,3 +436,60 @@ samp {
     line-height: 95%;
   }
 }
+
+.comp-banner {
+  padding: 0 var(--spacing-4xl);
+  background-color: #0b0b0b;
+  /* margin: 2rem 0; */
+  height: 90vh;
+  background-image: url('/images/p10pro-comparison.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.comp-banner-content {
+  position: absolute;
+  bottom: calc(10% - var(--spacing-2xl));
+  left: calc(10% - 10px);
+  color: #0b0b0b;
+  /* transform: translate(-50%, -50%); */
+}
+
+.comp-banner-content h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  line-height: 1.1rem;
+  color: #0b0b0b;
+  margin-bottom: var(--spacing-md);
+}
+
+.comp-banner-content p {
+  font-size: var(--font-size-lg);
+  line-height: 0.9rem;
+  color: #0b0b0b;
+}
+
+@media (max-width: 961px) {
+  .comp-banner {
+    height: 100vh;
+    background-image: url('/images/drone-comp-m.png');
+  }
+
+  .comp-banner-content {
+    bottom: 1.5rem;
+    left: 1rem;
+    color: #0b0b0b;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .comp-banner-content h3 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .comp-banner-content p {
+    font-size: var(--font-size-md);
+  }
+}

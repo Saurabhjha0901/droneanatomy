@@ -17,6 +17,7 @@
     max-width: 1400px;
     margin: 0 auto;
     margin-bottom: var(--spacing-2xl);
+    /* padding: var(--spacing-md); */
 }
 
 .content {
@@ -28,7 +29,6 @@
     font-family: var(--font-family-heading);
     font-size: var(--font-size-3xl);
     font-weight: 600;
-    font-style: italic;
     color: var(--color-text-primary);
     line-height: 1.2;
     margin-bottom: var(--spacing-xl);

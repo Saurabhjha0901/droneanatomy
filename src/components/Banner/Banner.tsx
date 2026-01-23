@@ -205,13 +205,13 @@ export const Banner: React.FC<BannerProps> = ({
                             </button>
                         </form>
                     )}
-                    {ctaText && (
-                        <div className={styles.ctaWrapper}>
-                            <CustomButton href={ctaLink} showArrow>
-                                {ctaText}
+                    <div className={styles.ctaWrapper}>
+                        <div style={{ visibility: ctaText ? 'visible' : 'hidden', pointerEvents: ctaText ? 'auto' : 'none' }}>
+                            <CustomButton href={ctaLink || '#'} showArrow>
+                                {ctaText || 'Placeholder'}
                             </CustomButton>
                         </div>
-                    )}
+                    </div>
                 </div>
             </div>
 

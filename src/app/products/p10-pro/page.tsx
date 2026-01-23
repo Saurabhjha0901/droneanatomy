@@ -9,9 +9,9 @@ export default function P10ProPage() {
     return (
         <>
             <Banner
-                title="P10 Pro"
+                title="Starship"
                 titleSize='hero'
-                subtitle="Agriculture Drone, Made For Indian Conditions"
+                subtitle="AGRICULTURE DRONE, MADE FOR INDIAN CONDITIONS."
                 contentPosition="center-left"
                 backgroundImage='/images/p10.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
@@ -46,7 +46,7 @@ export default function P10ProPage() {
                 subtitle="Up to 5L/min"
                 contentPosition="bottom-left"
                 backgroundVideo='/videos/spray.mp4'
-                backgroundImageMobile='/images/spray-m.jpg'
+                backgroundImageMobile='/images/p10pro-spray-m.png'
                 overlayStyle="light"
                 textAlign='left'
             />
@@ -81,17 +81,13 @@ export default function P10ProPage() {
                     '/images/portable4.png',
                 ]}
             />
-            <Banner
-                title="Note:"
-                titleSize='sm'
-                subtitle="The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations."
-                contentPosition="bottom-left"
-                backgroundImage='/images/p10pro-comparison.png'
-                overlayStyle="light"
-                textColor='black'
-                textAlign='left'
-            />
 
+            <div className="comp-banner">
+                <div className="comp-banner-content">
+                    <h3>NOTE:</h3>
+                    <p>The Drone Anatomy P10 Pro is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations.</p>
+                </div>
+            </div>
             <Newsletter />
         </>
     );
