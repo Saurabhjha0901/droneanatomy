@@ -9,7 +9,7 @@ export default function P10ProPage() {
     return (
         <>
             <Banner
-                title="Starship"
+                title="P10 Pro"
                 titleSize='hero'
                 subtitle="AGRICULTURE DRONE, MADE FOR INDIAN CONDITIONS."
                 contentPosition="center-left"
