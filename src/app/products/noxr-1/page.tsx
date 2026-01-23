@@ -1,4 +1,4 @@
-import { Banner, Slider, Newsletter, FeatureShowcase } from '@/components';
+import { Banner, Slider, Newsletter, FeatureShowcase, Counter, StatsSection } from '@/components';
 
 export const metadata = {
     title: 'NOXR-1 | DroneAnatomy',
@@ -12,13 +12,20 @@ export default function Noxr1Page() {
                 title="NOXR-1"
                 titleSize='hero'
                 subtitle="AGRICULTURE DRONE, MADE FOR INDIAN CONDITIONS."
-                contentPosition="center-left"
+                contentPosition="center"
                 backgroundImage='/images/p10.png'
                 // backgroundVideo='/videos/opening-drone.mp4'
-                overlayStyle="dark"
-                textAlign='left'
+                overlayStyle="none"
+                textAlign='center'
                 showScrollIndicator
                 animate={true}
+            />
+            <StatsSection
+                stats={[
+                    { value: 596, label: 'Completed Missions' },
+                    { value: 556, label: 'Total Landings' },
+                    { value: 519, label: 'Total Reflights' },
+                ]}
             />
 
 
@@ -27,8 +34,8 @@ export default function Noxr1Page() {
                     {
                         title: 'NOXR-1 Overview',
                         description: "The Drone Anatomy NOXR-1 is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, NOXR-1 integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
-                        // backgroundImage: '/images/p10pro-overview.png',
-                        backgroundVideo: '/videos/drone-show.mp4',
+                        backgroundImage: '/images/p10pro-overview.png',
+                        // backgroundVideo: '/videos/drone-show.mp4',
                         // sideVideo: '/videos/opening-drone.mp4',
                         specs: [
                             { label: 'Max Flight Time', value: '30 minutes' },
@@ -40,10 +47,11 @@ export default function Noxr1Page() {
                 ]}
             />
 
+
             <Banner
-                title="Max Flow Rate"
-                titleSize='sm'
-                subtitle="Up to 5L/min"
+                title="Video"
+                titleSize='lg'
+                subtitle="Falcon 9 in flight"
                 contentPosition="bottom-left"
                 backgroundVideo='/videos/spray.mp4'
                 backgroundImageMobile='/images/p10pro-spray-m.png'
@@ -51,6 +59,23 @@ export default function Noxr1Page() {
                 textAlign='left'
             />
 
+            <Slider
+                slides={[
+                    {
+                        title: 'NOXR-1 Overview',
+                        description: "The Drone Anatomy NOXR-1 is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations. Engineered for reliability and efficiency, NOXR-1 integrates advanced flight control, intelligent payload systems, and rugged airframe construction to operate consistently across large and demanding agricultural environments.",
+                        backgroundImage: '/images/p10pro-overview.png',
+                        // backgroundVideo: '/videos/drone-show.mp4',
+                        // sideVideo: '/videos/opening-drone.mp4',
+                        specs: [
+                            { label: 'Max Flight Time', value: '30 minutes' },
+                            { label: 'Payload Capacity', value: '10kg' },
+                            { label: 'SPRAY WIDTH', value: '4 - 6 m' },
+                            { label: 'POSITIONING SYSTEM', value: 'GPS Assisted Navigation' },
+                        ],
+                    },
+                ]}
+            />
             <Banner
                 title="Night Flying Capability - Equipped with bright LED lights"
                 titleSize='sm'
@@ -62,32 +87,6 @@ export default function Noxr1Page() {
                 textAlign='left'
             />
 
-            <FeatureShowcase
-                title="Introducing India's First Ultra-Compact Agricultural Drone!"
-                features={[
-                    'Light enough to carry anywhere.',
-                    'Made for Indian conditions.',
-                    'Saves transportation costs.',
-                    'Covers 1 Acre in 5 Minutes.',
-                    'Ultra Fast battery charging.',
-                ]}
-                ctaText="Questions? Contact Today!"
-                // ctaLink="/contact"
-                mainImage="/images/p10pro-bannershot.png"
-                galleryImages={[
-                    '/images/portable1.png',
-                    '/images/portable2.png',
-                    '/images/portable3.png',
-                    '/images/portable4.png',
-                ]}
-            />
-
-            <div className="comp-banner">
-                <div className="comp-banner-content">
-                    <h3>NOTE:</h3>
-                    <p>The Drone Anatomy NOXR-1 is a high-performance agricultural drone designed for precision spraying, crop monitoring, and autonomous field operations.</p>
-                </div>
-            </div>
             <Newsletter />
         </>
     );
