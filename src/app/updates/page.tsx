@@ -13,7 +13,7 @@ export default function UpdatesPage() {
                 titleSize='hero'
                 subtitle="Enter your email to sign up for DroneAnatomy updates"
                 contentPosition="center"
-                backgroundImage='/images/updates-banner.png'
+                backgroundImage='/images/updates-hero.png'
                 textAlign='center'
                 overlayStyle="dark"
                 showEmailSignup
