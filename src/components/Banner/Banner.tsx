@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import { CustomButton } from '../CustomButton';
+import { subscribeToLoops } from '@/app/actions/subscribe';
 import styles from './Banner.module.css';
 
 export type ContentPosition =
@@ -32,13 +33,14 @@ export interface BannerProps {
     animate?: boolean;
     className?: string;
     textColor?: 'black' | 'white';
-    subtitleSize?: 'sm' | 'md' | 'lg';
+    subtitleSize?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const subtitleSizeClassMap: Record<string, string> = {
     'sm': styles.subtitleSm,
     'md': styles.subtitleMd,
     'lg': styles.subtitleLg,
+    'xl': styles.subtitleXl,
 };
 
 const titleSizeClassMap: Record<string, string> = {
@@ -127,13 +129,34 @@ export const Banner: React.FC<BannerProps> = ({
         });
     };
 
-    const handleEmailSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const handleEmailSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (email) {
-            console.log('Email signup:', email);
-            setSubmitted(true);
-            setEmail('');
-            setTimeout(() => setSubmitted(false), 3000);
+        if (!email) return;
+
+        setIsSubmitting(true);
+        setMessage('');
+
+        const formData = new FormData();
+        formData.append('email', email);
+
+        try {
+            const result = await subscribeToLoops(formData);
+
+            if (result.success) {
+                setSubmitted(true);
+                setEmail('');
+                setMessage(result.message);
+                setTimeout(() => setSubmitted(false), 3000);
+            } else {
+                setMessage(result.message || 'Failed to subscribe.');
+            }
+        } catch (error) {
+            setMessage('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -208,9 +231,10 @@ export const Banner: React.FC<BannerProps> = ({
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
-                            <button type="submit" className={styles.emailSubmit}>
-                                {submitted ? 'Thank you!' : 'Submit'}
+                            <button type="submit" className={styles.emailSubmit} disabled={isSubmitting}>
+                                {isSubmitting ? 'Submitting...' : submitted ? 'Thank you!' : 'Submit'}
                             </button>
+                            {message && <p className={styles.message} style={{ color: submitted ? 'lightgreen' : '#ff6b6b' }}>{message}</p>}
                         </form>
                     )}
                     <div className={styles.ctaWrapper}>

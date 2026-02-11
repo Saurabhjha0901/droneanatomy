@@ -3,7 +3,7 @@
 .ctaButton {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: var(--spacing-sm);
     padding: 4px 20px;
     font-family: var(--font-family);
@@ -15,15 +15,11 @@
     background-color: var(--color-bg-button);
     border: 1px solid var(--color-border);
     border-radius: 4px;
-    cursor: pointer;
     transition: all var(--transition-base);
     white-space: nowrap;
+    width: 320px;
 }
 
-.ctaButton:hover {
-    background-color: rgba(240, 240, 250, 0.9);
-    color: var(--color-bg);
-}
 
 .ctaButton:active {
     transform: scale(0.98);
@@ -36,12 +32,8 @@
     border-color: var(--color-text-primary);
 }
 
-.primary:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
 .secondary {
-    background-color: var(--color-bg-button);
+    background-color: transparent;
     color: var(--color-text-primary);
     border-color: var(--color-border);
 }
@@ -49,12 +41,6 @@
 .ghost {
     border-color: transparent;
     padding: 10px 0;
-}
-
-.ghost:hover {
-    background-color: transparent;
-    border-color: transparent;
-    opacity: 0.7;
 }
 
 /* Sizes */
@@ -74,19 +60,10 @@
     transition: transform var(--transition-fast);
 }
 
-.ctaButton:hover .arrow {
-    transform: translateX(4px);
-}
 
 /* Full width */
 .fullWidth {
     width: 100%;
-}
-
-/* With countdown/badge style */
-.withBadge {
-    position: relative;
-    padding-right: 100px;
 }
 
 .badge {

@@ -196,6 +196,11 @@
     font-weight: 500;
 }
 
+.subtitleXl {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+}
+
 /* Text Color Options */
 .textBlack {
     color: #000000 !important;
@@ -256,6 +261,12 @@
 .emailSubmit:hover {
     background-color: transparent;
     color: var(--color-text-primary);
+}
+
+.message {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 /* Scroll Indicator */

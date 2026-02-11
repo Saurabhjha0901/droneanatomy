@@ -12,22 +12,25 @@ export default function AboutPage() {
                 title="Our Belief"
                 subtitle="The future of flight is autonomous and building it responsibly is one of the most important engineering challenges of our time."
                 contentPosition="center"
-                backgroundImage="/images/about-home.png"
+                backgroundImage="/images/mission.jpg"
                 textAlign="center"
+                titleSize='lg'
+                subtitleSize='xl'
             />
 
             <StatsSection
                 stats={[
-                    { value: 596, label: 'Completed Missions' },
-                    { value: 556, label: 'Total Landings' },
-                    { value: 519, label: 'Total Reflights' },
+                    { value: 1200, label: 'Hours of Flight', suffix: '+' },
+                    { value: 10, label: 'Build over time', suffix: '+' },
+                    { value: 9, label: 'Systems in motion', suffix: '+' },
+                    { value: 3000, label: 'Total Landings', suffix: '+' },
                 ]}
             />
-
+            {/* 
             <Slider
                 slides={[
                     {
-                        title: 'Making History',
+                        title: 'Making Autonomous Flight Inevitable',
                         description: 'DroneAnatomy has gained worldwide attention for a series of historic milestones. We are the first company to achieve fully autonomous long-range drone delivery, and our technology powers critical infrastructure inspections across the globe.',
                         backgroundImage: '/images/aboutlayout2.jpg',
                     },
@@ -42,23 +45,16 @@ export default function AboutPage() {
                         backgroundImage: '',
                     },
                 ]}
-            />
+            /> */}
 
-            <Banner
-                title="Our Mission"
-                subtitle="To make advanced aerial technology accessible to enterprises and individuals worldwide, enabling new possibilities in data collection, inspection, and creative expression."
-                contentPosition="center-left"
-                backgroundImage="/images/aboutlayout3.jpg"
-                overlayStyle="dark"
-            />
 
-            <Banner
+            {/* <Banner
                 title="Our Vision"
                 subtitle="A world where drones seamlessly integrate into everyday operations, making work safer, more efficient, and more sustainable."
                 contentPosition="center-left"
                 backgroundImage="/images/aboutlayout4.jpg"
                 overlayStyle="dark"
-            />
+            /> */}
 
             <CardGrid
                 sectionTitle="Our Journey"
@@ -140,8 +136,8 @@ export default function AboutPage() {
 
 
             <Banner
-                title="Join Our Team"
-                subtitle="We're always looking for talented engineers, designers, and pilots to join our mission. Explore career opportunities."
+                title="Our Team"
+                // subtitle="We're always looking for talented engineers, designers, and pilots to join our mission. Explore career opportunities."
                 ctaText="View Careers"
                 ctaLink="/careers"
                 backgroundImage="/images/aboutlayout5.jpg"

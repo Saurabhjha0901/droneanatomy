@@ -16,7 +16,13 @@
     gap: var(--spacing-lg);
 }
 
-/* Social Icon */
+/* Social Icons */
+.socialIcons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
 .socialIcon {
     display: flex;
     align-items: center;

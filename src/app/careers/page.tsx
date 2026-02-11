@@ -46,8 +46,7 @@ export default function CareersPage() {
                 </div>
 
                 <div className={styles.links}>
-                    <a href="/careers/openings" className={styles.link}>View All Openings</a>
-                    <a href="/careers/internships" className={styles.link}>Internships</a>
+                    <a href="mailto:[EMAIL_ADDRESS]" className={styles.link}>Internships</a>
                 </div>
             </div>
         </section>

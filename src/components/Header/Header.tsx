@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Dropdown } from '../Dropdown';
 import { CTAButton } from '../CTAButton';
+import { NewsDropdown } from '../NewsDropdown';
 import styles from './Header.module.css';
 
 const productItems = [
@@ -10,20 +11,42 @@ const productItems = [
     { label: 'NOXR-1', href: '/products/noxr-1' },
 ];
 
-const companyItems = [
-    { label: 'Mission', href: '/about' },
-    { label: 'Updates', href: '/updates' },
-    { label: 'Careers', href: '/careers' },
-];
+// const companyItems = [
+//     { label: 'Mission', href: '/about' },
+//     { label: 'Updates', href: '/updates' },
+//     { label: 'Careers', href: '/careers' },
+// ];
 
 const navItems = [
-    { label: 'Launches', href: '/launches' },
+    { label: 'Mission', href: '/about' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Updates', href: '/updates' },
+    { label: 'Contact', href: '/contact' },
+
+];
+
+const upcomingUpdates = [
+    {
+        id: '1',
+        title: 'From 10th-grade Student to Drone Startup Founder',
+        image: 'https://img.youtube.com/vi/wzhFkAOHIrs/hqdefault.jpg',
+        date: 'Jan 6, 2026',
+        href: 'https://www.youtube.com/watch?v=wzhFkAOHIrs',
+    },
+    {
+        id: '2',
+        title: 'India’s Digital Revolution: From 25 Cr to 97 Cr Internet Users',
+        image: 'https://img.youtube.com/vi/IQPYPF3ohXA/hqdefault.jpg',
+        date: 'Sep 15, 2025',
+        href: 'https://www.youtube.com/watch?v=IQPYPF3ohXA',
+    },
 ];
 
 export const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isUpdatesOpen, setIsUpdatesOpen] = useState(false);
     const lastScrollY = useRef(0);
 
     useEffect(() => {
@@ -90,11 +113,11 @@ export const Header: React.FC = () => {
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
                         <li>
-                            <Dropdown label="Vehicles" items={productItems} />
+                            <Dropdown label="Systems" items={productItems} />
                         </li>
-                        <li>
+                        {/* <li>
                             <Dropdown label="Company" items={companyItems} />
-                        </li>
+                        </li> */}
                         {navItems.map((item) => (
                             <li key={item.label}>
                                 <a href={item.href} className={styles.navLink}>
@@ -106,10 +129,15 @@ export const Header: React.FC = () => {
                 </nav>
 
                 {/* Desktop CTA */}
-                <div className={styles.ctaContainer}>
-                    <CTAButton href="/contact">
-                        Get Started
+                <div
+                    className={styles.ctaContainer}
+                    onMouseEnter={() => setIsUpdatesOpen(true)}
+                    onMouseLeave={() => setIsUpdatesOpen(false)}
+                >
+                    <CTAButton href="/updates">
+                        Upcoming Updates
                     </CTAButton>
+                    <NewsDropdown isOpen={isUpdatesOpen} items={upcomingUpdates} />
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -158,11 +186,11 @@ export const Header: React.FC = () => {
                 <nav>
                     <ul className={styles.mobileNavList}>
                         <li>
-                            <Dropdown label="Products" items={productItems} />
+                            <Dropdown label="Systems" items={productItems} />
                         </li>
-                        <li>
+                        {/* <li>
                             <Dropdown label="Company" items={companyItems} />
-                        </li>
+                        </li> */}
                         {navItems.map((item) => (
                             <li key={item.label}>
                                 <a
@@ -176,9 +204,18 @@ export const Header: React.FC = () => {
                         ))}
                     </ul>
                     <div className={styles.mobileCta}>
-                        <CTAButton href="/contact" showArrow size='small'>
-                            Get Started
+                        <CTAButton
+                            showArrow
+                            size='small'
+                            href='/updates'
+                        >
+                            Upcoming Updates
                         </CTAButton>
+                        <NewsDropdown
+                            isOpen={true}
+                            items={upcomingUpdates}
+                            isMobile={true}
+                        />
                     </div>
                 </nav>
             </div>
